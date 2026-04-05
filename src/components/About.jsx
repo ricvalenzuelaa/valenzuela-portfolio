@@ -1,5 +1,5 @@
 import ProfileCard from "./ProfileCard"
-import Profile from '../assets/ric.jpg'
+import Profile from '../assets/Ric.jpg'
 
 const About = () => {
   return (
