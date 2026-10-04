@@ -34,7 +34,8 @@
   perspective: 500px;
   transform: translate3d(0, 0, 0.1px);
   position: relative;
-  touch-action: none;
+  touch-action: pan-y;
+  max-width: 100%;
 }
 
 .pc-behind {
@@ -426,9 +427,16 @@
 }
 
 @media (max-width: 768px) {
+  .pc-card-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   .pc-card {
-    height: 70svh;
-    max-height: 450px;
+    height: 65svh;
+    max-height: 420px;
+    max-width: min(100%, 320px);
   }
 
   .pc-details {
@@ -473,8 +481,9 @@
 
 @media (max-width: 480px) {
   .pc-card {
-    height: 60svh;
+    height: 55svh;
     max-height: 380px;
+    max-width: min(100%, 280px);
   }
 
   .pc-details {
@@ -521,8 +530,9 @@
 
 @media (max-width: 320px) {
   .pc-card {
-    height: 55svh;
+    height: 50svh;
     max-height: 320px;
+    max-width: min(100%, 250px);
   }
 
   .pc-details h3 {

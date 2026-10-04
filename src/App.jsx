@@ -8,25 +8,25 @@ import Contacts from './components/Contacts'
 
 function App() {
   return (
-    <div className = "relative min-h-screen bg-black">
-     <Layout />
+    <div className="relative min-h-screen bg-black w-full overflow-x-hidden">
+      <Layout />
 
-        <div className="relative z-10">
-     <Navbar/>
+      <div className="relative z-10 w-full">
+        <Navbar />
 
-     <Home/>
-     
-     <About/>
+        <Home />
 
-     <Skills/>
-     
-     <Projects/>
+        <About />
 
-     <Contacts/>
-   </div>
-     </div>
+        <Skills />
+
+        <Projects />
+
+        <Contacts />
+      </div>
+    </div>
   )
 }
 
-    
+
 export default App

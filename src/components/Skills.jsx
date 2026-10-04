@@ -63,39 +63,42 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className = "min-h-screen flex flex-col items-center p-20">
-         <h2 className ="text-blue-600 text-4xl font-bold mb-16">Skills</h2>
+    <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 md:px-12 py-16 sm:py-24 max-w-7xl mx-auto w-full">
+      <h2 className="text-blue-600 text-3xl sm:text-4xl font-bold mb-10 sm:mb-16 text-center">
+        Skills
+      </h2>
 
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className = " border border-white/10 p-6 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all">
-              
-              <h3 className = "text-blue-400 text-xl font-bold flex items-center gap-3 mb-6">
-                <span className = "text-2xl">{category.icon}</span>
-                {category.title}
-                </h3>
-              
-              <div className = "grid grid-cols-2 gap-4">
-                {category.skills.map((skill, skillIndex) =>(
-                 <div 
-                 key = {skillIndex}
-                 className = "flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 hover:bg-blue-600/20 transition-colors group">   
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {skillCategories.map((category, index) => (
+          <div
+            key={index}
+            className="border border-white/10 p-5 sm:p-6 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all bg-white/[0.02]"
+          >
+            <h3 className="text-blue-400 text-lg sm:text-xl font-bold flex items-center gap-3 mb-5 sm:mb-6">
+              <span className="text-2xl">{category.icon}</span>
+              {category.title}
+            </h3>
 
-                 <span className = "text-white text-2xl mb-2 group-hover:scale-110 transition-transform">
-                   {skill.icon} 
-                 </span>
-                 <span className = "text-white text-xs font-medium group-hover:text-blue-600">
-                  {skill.name}  
-                 </span>
-                    </div>
-                ))}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              {category.skills.map((skill, skillIndex) => (
+                <div
+                  key={skillIndex}
+                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 hover:bg-blue-600/20 transition-colors group"
+                >
+                  <span className="text-white text-2xl mb-2 group-hover:scale-110 transition-transform">
+                    {skill.icon}
+                  </span>
+                  <span className="text-white text-xs sm:text-sm font-medium group-hover:text-blue-400 text-center">
+                    {skill.name}
+                  </span>
                 </div>
-                </div>
-                ))}
-                </div>
-                </section>
-            );
-        };
-export default Skills;
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export default Skills

@@ -14,62 +14,69 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className = "min-h-screen flex flex-col items-center p-20">
-      <h2 className ="text-white text-4xl font-bold">Featured <span className = "text-blue-600">Projects</span></h2>
-     <div className = "grid grid-cols-2 gap-4 mt-10 ">
-                {projects.map((project, projectIndex) =>(
-                 <div 
-                 key = { projectIndex}
-                 className = "flex flex-col items-center p-3 rounded-xl bg-white/5 hover:bg-blue-600/20 ">   
+    <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 md:px-12 py-16 sm:py-24 max-w-7xl mx-auto w-full">
+      <h2 className="text-white text-3xl sm:text-4xl font-bold text-center">
+        Featured <span className="text-blue-600">Projects</span>
+      </h2>
 
+      <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-10">
+        {projects.map((project, projectIndex) => (
+          <div
+            key={projectIndex}
+            className="flex flex-col items-center p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 hover:bg-white/[0.07] transition-all duration-300 w-full"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-48 sm:h-56 md:h-64 rounded-xl object-cover mb-4 border border-white/10 shadow-md"
+            />
 
-                 
-                    <img
-                    src = {project.image}
-                    alt = {project.title}
-                    className = "w-full h-64 rounded-lg object-cover mb-2 "
-                    />                   
-                 
+            <div className="text-white text-base sm:text-lg font-bold text-center">
+              {project.title}
+            </div>
 
-                 <div className = "text-white text-xs font-medium ">
-                  {project.title}  
-                 </div>
+            <p className="text-gray-300 text-xs sm:text-sm mt-1 text-center">
+              {project.Description}
+            </p>
 
-                 <p className = "text-white text-xs mt-1 text-center">
-                 {project.Description}  
-                 </p>
+            <div className="flex flex-wrap gap-2 justify-center mt-4">
+              {project.TechStack.map((tech, index) => (
+                <span
+                  key={index}
+                  className="bg-blue-600/20 text-blue-400 border border-blue-500/20 rounded-md px-2.5 py-1 text-xs font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
 
-                 <div className = "flex flex-wrap gap-2 justify-center mt-4">
-                    {project.TechStack.map((tech, index) => (
-                      <span 
-                      key = {index}
-                      className = "bg-blue-600/20 text-blue-400 rounded-md px-2 py-1 text-xs">
-                        {tech}
-                      </span>  
-                    ))}
-                    </div>
+            <div className="flex gap-6 mt-6">
+              <a
+                href={project.Github}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View GitHub repository"
+                className="text-gray-300 hover:text-blue-500 hover:scale-110 text-xl transition-all duration-200"
+              >
+                <FaGithub />
+                <span className="sr-only">Github repository</span>
+              </a>
 
-                    <div className = "flex gap-4 mt-6">
-                        <a href = {project.Github}
-                        target = "_blank"
-                        rel = "noopener noreferrer"
-                        className = "text-white hover:text-blue-600 text-xl">
-                            <FaGithub/>
-                            <span className = "sr-only">Github repository</span>
-                            </a>
-
-                            <a href = {project.Link}
-                            target = "_blank"
-                            rel = "noopener noreferrer"
-                            className = "text-white hover:text-blue-600 text-xl">
-                                <FaExternalLinkAlt/>
-                                <span className = "sr-only">Visit Live Site</span>
-                            </a>
-                        </div>
-                    </div>
-                     ))}
-                    </div>
-                    </section>
+              <a
+                href={project.Link}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Visit Live Site"
+                className="text-gray-300 hover:text-blue-500 hover:scale-110 text-xl transition-all duration-200"
+              >
+                <FaExternalLinkAlt />
+                <span className="sr-only">Visit Live Site</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }
 
