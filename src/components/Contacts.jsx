@@ -78,7 +78,7 @@ const Contacts = () => {
                         Contact <span className="text-blue-600">Me</span>
                     </h2>
                     <p className="text-gray-300 text-sm sm:text-base mt-3">
-                        Have a question or want to work together? Fill out the form below and I'll get back to you!
+                        Whether you have a question, want to collaborate on a project, or just want to say hi, feel free to drop me a message!
                     </p>
                 </div>
 
