@@ -75,7 +75,7 @@ const Contacts = () => {
 
                 <div className="text-center mb-10">
                     <h2 className="text-white text-3xl sm:text-4xl font-bold">
-                        Contact <span className="text-blue-600">Me</span>
+                        GET IN <span className="text-blue-600">TOUCH</span>
                     </h2>
                     <p className="text-gray-300 text-sm sm:text-base mt-3">
                         Whether you have a question, want to collaborate on a project, or just want to say hi, feel free to drop me a message!

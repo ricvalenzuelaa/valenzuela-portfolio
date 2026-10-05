@@ -29,10 +29,10 @@ const Home = () => {
           Hi, I'm <span className="text-blue-600">Ric Andrei Valenzuela</span>
         </h1>
         <div className="text-xl sm:text-2xl lg:text-3xl font-medium mt-3 sm:mt-4 text-gray-200">
-          Backend Developer
+          Aspiring Backend developer & UX designer
         </div>
         <p className="text-base sm:text-lg mt-4 sm:mt-6 text-gray-300 leading-relaxed">
-          Currently a 2nd Year Student of BSIT at Western Institute of Technology
+          3rd Year IT Student of BSIT at Western Institute of Technology
         </p>
 
         <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">

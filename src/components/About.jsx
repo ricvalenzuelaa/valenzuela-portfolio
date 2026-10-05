@@ -12,8 +12,8 @@ const About = () => {
         <h2 className="text-white text-3xl sm:text-4xl font-bold">
           About <span className="text-blue-600">Me</span>
         </h2>
-        <p className="text-gray-300 text-base sm:text-lg mt-4 sm:mt-6 leading-relaxed">
-          I'm the type of person who loves exploring new things that can help me further my knowledge towards my career.
+        <p className="text-gray-300 text-lg sm:text-xl mt-4 sm:mt-6 leading-relaxed">
+          Aspiring Backend developer & UX designer combining solid functionality with clean, user-centric design to craft seamless digital experiences.
         </p>
       </div>
     </section>

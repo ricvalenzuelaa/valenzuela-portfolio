@@ -1,14 +1,14 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import Awesometodos from '../assets/Awesometodos.png'
 const projects = [
-    {
-        title: "Awesome Todos App",
-        Description: "A Full-Stack Web App",
-        image: Awesometodos,
-        TechStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
-        Link: "https://awesometodosapp-1dx4.onrender.com/?fbclid=IwY2xjawQ_DAxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeQSf8wbTKYuMdfQk7uHxNV_2kempNbSCokCwLhGW2QQcorXKYlJ-h11JVkHw_aem_GqQnP6WjmbUW0q2wPFzTlg",
-        Github: "https://github.com/ricvalenzuelaa/awesometodosapp?fbclid=IwY2xjawQ_DfxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeRY6YsiQR1xUadFELh-XzhcKfIa2bH5XGBRVrtZqOc9mI0CrckXOAuy78ANA_aem_tPAGiuTWd9w72LUCwEd-5Q",
-    },
+  {
+    title: "Awesome Todos App",
+    Description: "A Full-Stack Web App",
+    image: Awesometodos,
+    TechStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
+    Link: "https://awesometodosapp-1dx4.onrender.com/?fbclid=IwY2xjawQ_DAxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeQSf8wbTKYuMdfQk7uHxNV_2kempNbSCokCwLhGW2QQcorXKYlJ-h11JVkHw_aem_GqQnP6WjmbUW0q2wPFzTlg",
+    Github: "https://github.com/ricvalenzuelaa/awesometodosapp?fbclid=IwY2xjawQ_DfxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeRY6YsiQR1xUadFELh-XzhcKfIa2bH5XGBRVrtZqOc9mI0CrckXOAuy78ANA_aem_tPAGiuTWd9w72LUCwEd-5Q",
+  },
 ];
 
 
