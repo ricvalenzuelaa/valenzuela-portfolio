@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import { FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'
-import { supabase } from '../supabase'
+import { useState } from 'react';
+import { FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
+import { sendEmail } from '../email';
+
 
 const Contacts = () => {
     const [formData, setFormData] = useState({
@@ -33,38 +34,32 @@ const Contacts = () => {
             isError: false,
         })
 
-        try {
-            const { error } = await supabase
-                .from('contacts')
-                .insert([
-                    {
-                        name: formData.name.trim(),
-                        email: formData.email.trim(),
-                        message: formData.message.trim(),
-                    },
-                ])
 
-            if (error) {
-                throw error
-            }
+        try {
+            // Send email via EmailJS
+            await sendEmail(
+                { name: formData.name.trim(), email: formData.email.trim() },
+                { subject: 'New contact form submission', message: formData.message.trim() }
+            );
 
             setStatus({
                 submitting: false,
                 success: true,
-                message: `Thank you, ${formData.name}! Your message has been received and saved.`,
+                message: `Thank you, ${formData.name}! Your message has been received.`,
                 isError: false,
-            })
-            setFormData({ name: '', email: '', message: '' })
+            });
+            setFormData({ name: '', email: '', message: '' });
         } catch (error) {
-            console.error('Error saving contact to Supabase:', error)
+            console.error('Error sending email via EmailJS:', error);
             setStatus({
                 submitting: false,
                 success: false,
                 message: error.message || 'Failed to send message. Please try again.',
                 isError: true,
-            })
+            });
         }
     }
+
 
     return (
         <section
